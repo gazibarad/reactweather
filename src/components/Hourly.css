@@ -1,0 +1,33 @@
+.hourly-container {
+  height: 40%;
+  width: 67%;
+  position: absolute;
+  left: 50%;
+  top: 23%;
+  transform: translate(-50%, 0);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px;
+  row-gap: 5px;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.hour {
+  background-color: #1c323ae5;
+  border-radius: 25px;
+  color: rgb(243, 241, 241);
+  width: 105%;
+}
+
+@media only screen and (min-width: 600px) {
+  .hourly-container {
+    padding: 0 11%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .hourly-container {
+    padding: 0 18%;
+  }
+}

@@ -1,0 +1,59 @@
+.links-container {
+  position: absolute;
+  left: 50%;
+  bottom: 22%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  font-size: 0.8em;
+}
+
+.link {
+  padding: 0.001em 0.002em;
+  width: 38%;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #3b5084;
+  color: #f7f4f4;
+  outline: none;
+  transition: transform 0.2s linear;
+  margin-inline: -5px;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.2);
+}
+
+.link.active {
+  z-index: 50;
+  background-color: #283a68;
+  transform: scale(1.2);
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 390px) {
+  .links-container {
+    bottom: 18%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .links-container {
+    bottom: 12%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .links-container {
+    bottom: 10%;
+    font-size: 1.2em;
+    width: 350px;
+  }
+
+  .link {
+    padding: 0.1em 0.4em;
+  }
+}
