@@ -22,20 +22,37 @@ function App() {
     e.preventDefault();
 
     fetch(`${api.baseurl}weather?q=${search}&units=metric&APPID=${api.key}`)
+      .then(checkFetch)
       .then((res) => res.json())
-      .then((obj) => setWeatherData(obj));
+      .then((obj) => setWeatherData(obj))
+      .catch((err) => {
+        console.log(err.message);
+      });
 
     fetch(`${api.baseurl}weather?q=${search}&units=metric&APPID=${api.key}`)
+      .then(checkFetch)
       .then((res) => res.json())
-      .then((obj) => setCoords(obj.coord));
+      .then((obj) => setCoords(obj.coord))
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   const fetchingForecast = () => {
-    fetch(
-      `${api.baseurl}onecall?lat=${coords.lat}&lon=${coords.lon}&exclude={minutely}&appid=${api.key}`
-    )
-      .then((res) => res.json())
-      .then((obj) => setForecastData(obj));
+    if (typeof coords.lat !== "undefined") {
+      fetch(
+        `${api.baseurl}onecall?lat=${coords.lat}&lon=${coords.lon}&exclude={minutely}&appid=${api.key}`
+      )
+        .then((res) => res.json())
+        .then((obj) => setForecastData(obj));
+    }
+  };
+
+  const checkFetch = (res) => {
+    if (!res.ok) {
+      throw Error(res.statusText);
+    }
+    return res;
   };
 
   useEffect(() => {

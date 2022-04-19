@@ -1,7 +1,6 @@
 import "./Hourly.css";
 
 const Hourly = (props) => {
-  console.log(props);
   return (
     <>
       {typeof props.forecastData != "undefined" ? (
