@@ -70,7 +70,6 @@ function App() {
 
   return (
     <>
-      {showAlert ? <ErrorAlert /> : null}
       <div className="App">
         <Search
           search={search}
@@ -97,6 +96,7 @@ function App() {
           ""
         )}
       </div>
+      {showAlert ? <ErrorAlert /> : null}
     </>
   );
 }
