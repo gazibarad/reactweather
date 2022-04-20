@@ -1,8 +1,9 @@
 import "./Hourly.css";
+import AnimatedContent from "./AnimatedContent";
 
 const Hourly = (props) => {
   return (
-    <>
+    <AnimatedContent>
       {typeof props.forecastData != "undefined" ? (
         <div className="hourly-container">
           <div className="hour">
@@ -39,7 +40,7 @@ const Hourly = (props) => {
       ) : (
         ""
       )}
-    </>
+    </AnimatedContent>
   );
 };
 

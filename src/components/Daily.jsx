@@ -1,8 +1,9 @@
 import "./Daily.css";
+import AnimatedContent from "./AnimatedContent";
 
 const Daily = (props) => {
   return (
-    <>
+    <AnimatedContent>
       {typeof props.forecastData != "undefined" ? (
         <div className="daily-container">
           <div className="day">{`${
@@ -26,7 +27,7 @@ const Daily = (props) => {
       ) : (
         ""
       )}
-    </>
+    </AnimatedContent>
   );
 };
 
