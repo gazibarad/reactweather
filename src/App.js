@@ -6,6 +6,7 @@ import Hourly from "./components/Hourly";
 import Daily from "./components/Daily";
 import Search from "./components/Search";
 import Links from "./components/Links";
+import ErrorAlert from "./components/ErrorAlert";
 
 const api = {
   key: process.env.REACT_APP_API_KEY,
@@ -17,6 +18,7 @@ function App() {
   const [weatherData, setWeatherData] = useState({});
   const [coords, setCoords] = useState({});
   const [forecastData, setForecastData] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   const pressingSearch = async (e) => {
     e.preventDefault();
@@ -24,17 +26,23 @@ function App() {
     fetch(`${api.baseurl}weather?q=${search}&units=metric&APPID=${api.key}`)
       .then(checkFetch)
       .then((res) => res.json())
-      .then((obj) => setWeatherData(obj))
-      .catch((err) => {
-        console.log(err.message);
+      .then((obj) => {
+        setWeatherData(obj);
+        setShowAlert(false);
+      })
+      .catch(() => {
+        setShowAlert(true);
       });
 
     fetch(`${api.baseurl}weather?q=${search}&units=metric&APPID=${api.key}`)
       .then(checkFetch)
       .then((res) => res.json())
-      .then((obj) => setCoords(obj.coord))
-      .catch((err) => {
-        console.log(err.message);
+      .then((obj) => {
+        setCoords(obj.coord);
+        setShowAlert(false);
+      })
+      .catch(() => {
+        setShowAlert(true);
       });
   };
 
@@ -50,6 +58,7 @@ function App() {
 
   const checkFetch = (res) => {
     if (!res.ok) {
+      console.clear();
       throw Error(res.statusText);
     }
     return res;
@@ -60,32 +69,35 @@ function App() {
   }, [coords]);
 
   return (
-    <div className="App">
-      <Search
-        search={search}
-        setSearch={setSearch}
-        pressingSearch={pressingSearch}
-      />
+    <>
+      {showAlert ? <ErrorAlert /> : null}
+      <div className="App">
+        <Search
+          search={search}
+          setSearch={setSearch}
+          pressingSearch={pressingSearch}
+        />
 
-      {typeof weatherData.main != "undefined" ? (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Current weatherData={weatherData} />} />
-            <Route
-              path="daily"
-              element={<Daily forecastData={forecastData.daily} />}
-            />
-            <Route
-              path="hourly"
-              element={<Hourly forecastData={forecastData.hourly} />}
-            />
-          </Routes>
-          <Links />
-        </BrowserRouter>
-      ) : (
-        ""
-      )}
-    </div>
+        {typeof weatherData.main != "undefined" ? (
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Current weatherData={weatherData} />} />
+              <Route
+                path="daily"
+                element={<Daily forecastData={forecastData.daily} />}
+              />
+              <Route
+                path="hourly"
+                element={<Hourly forecastData={forecastData.hourly} />}
+              />
+            </Routes>
+            <Links />
+          </BrowserRouter>
+        ) : (
+          ""
+        )}
+      </div>
+    </>
   );
 }
 

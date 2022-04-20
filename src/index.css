@@ -40,3 +40,32 @@ body {
   line-height: 2.5;
   position: relative;
 }
+
+#error-alert {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.7em;
+  line-height: 1.6;
+  font-weight: bold;
+  background-color: rgb(114, 11, 32);
+  color: white;
+  padding: 0.5em 2em;
+  width: 80%;
+  max-width: 600px;
+}
+
+@media only screen and (min-width: 600px) {
+  #error-alert {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #error-alert {
+    font-size: 1.6em;
+  }
+}
