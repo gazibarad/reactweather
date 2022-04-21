@@ -6,9 +6,11 @@ const Daily = (props) => {
     <AnimatedContent>
       {typeof props.forecastData != "undefined" ? (
         <div className="daily-container">
-          <div className="day">{`${
-            Math.round(props.forecastData[0].temp.day) - 273
-          }°C | ${props.forecastData[0].weather[0].description}`}</div>
+          <div className="day">
+            {`${Math.round(props.forecastData[0].temp.day) - 273}°C | ${
+              props.forecastData[0].weather[0].description
+            }`}
+          </div>
           <div className="day">
             {`${Math.round(props.forecastData[1].temp.day) - 273}°C | ${
               props.forecastData[0].weather[0].description

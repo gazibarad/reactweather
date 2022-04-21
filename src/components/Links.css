@@ -1,25 +1,26 @@
 .links-container {
   position: absolute;
   left: 50%;
-  bottom: 22%;
+  bottom: 7%;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: center;
-  width: 200px;
+  width: 80%;
   font-size: 0.8em;
 }
 
 .link {
-  padding: 0.001em 0.002em;
   width: 38%;
+  padding: 0.5em 1em;
   text-align: center;
   border-radius: 20px;
   text-decoration: none;
   background-color: #3b5084;
   color: #f7f4f4;
   outline: none;
+  line-height: 1.8;
   transition: transform 0.2s linear;
-  margin-inline: -5px;
+  margin-inline: -6px;
 }
 
 .link:hover,
@@ -28,32 +29,18 @@
 }
 
 .link.active {
-  z-index: 50;
+  z-index: 5;
   background-color: #283a68;
   transform: scale(1.2);
   letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 390px) {
-  .links-container {
-    bottom: 18%;
-  }
-}
-
 @media only screen and (min-width: 600px) {
   .links-container {
-    bottom: 12%;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  .links-container {
-    bottom: 10%;
-    font-size: 1.2em;
-    width: 350px;
+    font-size: 1.4em;
   }
 
   .link {
-    padding: 0.1em 0.4em;
+    padding: 0.25em 0.5em;
   }
 }

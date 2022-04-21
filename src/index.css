@@ -8,8 +8,13 @@
 
 body {
   background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  background-repeat: no-repeat;
   height: 100vh;
   font-family: "Noto Sans", sans-serif;
+}
+
+html {
+  min-width: 320px;
 }
 
 #root {
@@ -18,19 +23,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 320px;
 }
 
 .App {
   background: url(./img/cardsvg.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  aspect-ratio: 765/865;
   width: 80%;
-  height: 500px;
   max-width: 1200px;
   margin: 2em;
   padding: 2em;
@@ -61,6 +65,11 @@ body {
 @media only screen and (min-width: 600px) {
   #error-alert {
     font-size: 1.2em;
+  }
+
+  .App {
+    height: 60%;
+    width: auto;
   }
 }
 

@@ -1,8 +1,9 @@
 .current {
   position: absolute;
+  display: grid;
   left: 50%;
+  top: 6%;
   transform: translate(-50%, 0);
-  top: 25%;
 }
 
 #current-timezone {
@@ -11,8 +12,12 @@
 }
 
 #current-temperature {
-  font-size: 2.8em;
+  font-size: 4em;
   font-weight: 1000;
+  background-color: #f4f4f476;
+  width: 110%;
+  letter-spacing: 2px;
+  border-radius: 100vh;
 }
 
 #current-desc {
@@ -21,16 +26,18 @@
   text-transform: capitalize;
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   .current {
-    font-size: 1.4em;
-    top: 10%;
+    font-size: 1em;
   }
-}
+} */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   .current {
-    font-size: 1.7em;
-    top: 10%;
+    font-size: 1.3em;
+  }
+
+  .current {
+    gap: 15%;
   }
 }
