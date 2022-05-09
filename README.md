@@ -1,4 +1,4 @@
-# Weather API
+# Weather API 🌤️
 
 REACT.JS | CSS
 
