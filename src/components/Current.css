@@ -2,8 +2,7 @@
   position: absolute;
   display: grid;
   left: 50%;
-  top: 6%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
 }
 
 #current-timezone {
@@ -17,7 +16,7 @@
   background-color: #f4f4f476;
   width: 110%;
   letter-spacing: 2px;
-  border-radius: 100vh;
+  border-radius: 10%;
 }
 
 #current-desc {
@@ -28,12 +27,12 @@
 
 @media only screen and (min-width: 500px) {
   .current {
-    top: 18%;
+    top: 8%;
     gap: 2%;
   }
 
   #current-timezone {
-    font-size: 1.8em;
+    font-size: 2.5em;
   }
 
   #current-temperature {
@@ -41,14 +40,19 @@
   }
 
   #current-desc {
-    font-size: 1.8em;
+    font-size: 2.5em;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1025px) {
   .current {
     top: 9%;
     font-size: 1.3em;
     gap: 2%;
+    line-height: 1.4;
+  }
+
+  #current-temperature {
+    padding: 5px 15px;
   }
 }
