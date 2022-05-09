@@ -26,12 +26,29 @@
   text-transform: capitalize;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) {
   .current {
-    font-size: 1.3em;
+    top: 18%;
+    gap: 2%;
   }
 
+  #current-timezone {
+    font-size: 1.8em;
+  }
+
+  #current-temperature {
+    font-size: 5em;
+  }
+
+  #current-desc {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .current {
+    top: 9%;
+    font-size: 1.3em;
     gap: 2%;
   }
 }

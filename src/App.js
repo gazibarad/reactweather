@@ -93,7 +93,7 @@ function App() {
             <Links />
           </BrowserRouter>
         ) : (
-          ""
+          <h1 className="h1-location">Type in the location..</h1>
         )}
       </div>
       {showAlert ? <ErrorAlert /> : null}
