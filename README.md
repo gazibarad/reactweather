@@ -19,3 +19,7 @@ REACT.JS | CSS
 ## Mobile View
 
 <img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/weathermobile.png">
+
+## Figma Design
+
+<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/figma-weather.png">
