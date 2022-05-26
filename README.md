@@ -2,7 +2,7 @@
 
 REACT.JS | TAILWIND CSS
 
-<a href="https://reactweather.pages.dev/" target="_blank"><i>LIVE PAGE 🔗</i></a>
+<a href="https://gdweather.pages.dev/" target="_blank"><i>LIVE PAGE 🔗</i></a>
 
 ## Some of the features:
 
