@@ -1,16 +1,14 @@
 # Weather API 🌤️
 
-REACT.JS | CSS
+REACT.JS | TAILWIND CSS
 
 <a href="https://reactweather.pages.dev/" target="_blank"><i>LIVE PAGE 🔗</i></a>
 
 ## Some of the features:
-- react-router, useState, useEffect
-- fetching API, populating data and catching errors
-- passing props up and down the component tree
-- framer motion
-- react 18
-- grid and flexbox
+
+- redux-toolkit and redux-saga API
+- geolocation or user input
+- Tailwind CSS mobile first development
 
 ## Desktop View
 
