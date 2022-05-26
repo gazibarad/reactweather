@@ -12,12 +12,12 @@ REACT.JS | TAILWIND CSS
 
 ## Desktop View
 
-<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/weatheroranje.png">
+<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/src/img/desktop.png">
 
 ## Mobile View
 
-<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/weathermobile.png">
+<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/src/img/mobile.png">
 
 ## Figma Design
 
-<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/figma-weather.png">
+<img src="https://raw.githubusercontent.com/gazibarad/reactweather/main/src/img/figma.png">
