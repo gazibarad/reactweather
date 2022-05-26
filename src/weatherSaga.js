@@ -9,7 +9,7 @@ function* getWeatherCoords(payload) {
   if (typeof payload.payload === "string") {
     const geocodeFetch = yield call(() =>
       fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${payload.payload}&limit=5&appid=${key}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${payload.payload}&limit=5&appid=${key}`
       )
     );
     let geoData = yield geocodeFetch.json();
