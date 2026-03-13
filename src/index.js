@@ -21,9 +21,6 @@ saga.run(weatherSaga);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <div className="uppercase absolute top-16 font-extralight text-cardSolidColor left-1/2 -translate-x-1/2">
-      the app is still in development
-    </div>
     <App />
   </Provider>
 );
